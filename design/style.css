@@ -1,0 +1,27 @@
+#main {
+    padding-top: 50px;
+}
+
+#eight, #four {
+    color: white;
+    height: 500px;
+    padding: 25px;
+}
+
+#four {
+    background-color: red;
+}
+
+#eight {
+    background-color: #111
+}
+
+#now_playing_main {
+    padding-top: 25px;
+}
+
+#now_playing {
+    padding-left: 10px;
+    color: white;
+    background-color: #111;
+}
