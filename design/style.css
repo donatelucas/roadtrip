@@ -1,11 +1,24 @@
-#main {
+#setup_main {
     padding-top: 50px;
+}
+
+#landmarks, #playlist {
+    width: 800px;
+}
+
+#setup_button, #playlist_button {
+    padding-top: 80px;
+}
+
+#main {
+    padding-top: 100px;
 }
 
 #eight, #four {
     color: white;
     height: 500px;
     padding: 25px;
+    border-radius: 4px;
 }
 
 #four {
@@ -17,7 +30,9 @@
 }
 
 #now_playing_main {
+    border-radius: 4px;
     padding-top: 25px;
+    padding-bottom: 100px;
 }
 
 #now_playing {
