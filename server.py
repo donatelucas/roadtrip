@@ -2,7 +2,6 @@
 import Location
 import ApiKey
 import MapInterface
-import metricsFromSmartcar
 import smartcar
 import os
 from flask import Flask, jsonify, request, redirect
@@ -24,8 +23,7 @@ client = smartcar.AuthClient(
 
 )
 
-if __name__ == "__main__":
-    app.run(port=8000)
+
 
 '''
 so far useless...
