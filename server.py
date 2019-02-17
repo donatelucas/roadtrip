@@ -1,6 +1,7 @@
 
 import Location
 import ApiKey
+import MapInterface
 from flask import Flask, jsonify, request
 
 
@@ -49,7 +50,7 @@ sends the map from mapbox to the client.
 @app.route('/loadmap', methods =['GET'])
 def getMap():
     #TODO: return the map object from mapbox possibly html text
-    return 'map'
+    return MapInterface.getMap()
 
 
 
