@@ -60,11 +60,10 @@ returns the car metrics with provided options{odometer,location,both} get will r
 '''
 @app.route('/carmetrics', methods = ['GET','POST'])
 def getMetrics():
-    #TODO: replace return with real data from smartcar api
+
     if request.method == 'POST':
-         #metrics = metricsFromSmartcar(response.data.option)
-         x=1; #so compiler doesnt complain
+        vInfo, vOdo = metricsFromSmartcar.run()
+         
     else:
-        #metrics = metricsFromSmartcar()
-        x =2; #so compiler doesnt complain
-    return 'metrics' #remove quotes
+        vInfo, vOdo = metricsFromSmartcar.run()
+    return vInfo, vOdo
