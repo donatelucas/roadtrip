@@ -2,6 +2,7 @@
 import Location
 import ApiKey
 import MapInterface
+import metricsFromSmartcar
 from flask import Flask, jsonify, request
 
 
@@ -60,10 +61,7 @@ returns the car metrics with provided options{odometer,location,both} get will r
 '''
 @app.route('/carmetrics', methods = ['GET','POST'])
 def getMetrics():
-
-    if request.method == 'POST':
-        vInfo, vOdo = metricsFromSmartcar.run()
-         
-    else:
-        vInfo, vOdo = metricsFromSmartcar.run()
+    
+    metricsFromSmartcar.login()
+    vInfo, vOdo = metricsFromSmartcar.vehicle()
     return vInfo, vOdo

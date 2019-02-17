@@ -4,23 +4,24 @@ from flask_cors import CORS
 
 import os
 
-def run():
-    app = Flask(__name__)
-    CORS(app)
+app = Flask(__name__)
+CORS(app)
 
-    # global variable to save our access_token
-    access = None
 
-    client = smartcar.AuthClient(
-        client_id=os.environ.get('CLIENT_ID'),
-        client_secret=os.environ.get('CLIENT_SECRET'),
-        redirect_uri=os.environ.get('REDIRECT_URI'),
-        scope=['read_vehicle_info', 'read_odometer'],
-        test_mode=True,
 
-    )
+# global variable to save our access_token
+access = None
 
-    if __name__ == '__main__':
+client = smartcar.AuthClient(
+    client_id=os.environ.get('CLIENT_ID'),
+    client_secret=os.environ.get('CLIENT_SECRET'),
+    redirect_uri=os.environ.get('REDIRECT_URI'),
+    scope=['read_vehicle_info', 'read_odometer'],
+    test_mode=True,
+
+)
+
+if __name__ == '__main__':
     app.run(port=8000)
 
 
