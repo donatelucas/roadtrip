@@ -49,3 +49,18 @@ function readPlayList(){
 function setSong(){
     document.getElementById('now_playing').innerHTML = "Now playing: " + playlist[0];
 }
+
+$(()=>{
+    function serverRequest(url,method,obj,callback){
+        if(method == 'GET'){
+            $.get(url,(data)=>{
+                callback(data);
+            });
+        }else{
+            $.post(url,obj,(data)=>{
+                callback(data);
+            });
+        }
+    }
+
+});
