@@ -72,9 +72,8 @@ def getMap():
 
 @app.route('/login', methods=['GET'])
 def login():
-
-
     auth_url = client.get_auth_url()
+    
     return redirect(auth_url)
 
 
@@ -84,11 +83,11 @@ def exchange():
     global access
     access = client.exchange_code(code)
     
-    return redirect('http://localhost:5000/vehicle')
+    return redirect('http://localhost:5000/carmetrics')
 
 
 
-@app.route('/vehicle', methods=['GET'])
+@app.route('/carmetrics', methods=['GET'])
 def vehicle():
     global access
     vehicle_ids = smartcar.get_vehicle_ids(access['access_token'])['vehicles']
@@ -103,15 +102,4 @@ def vehicle():
     return jsonify(info, response)
 
 
-'''
-returns the car metrics with provided options{odometer,location,both} get will return all available
-'''
-'''
-@app.route('/carmetrics', methods = ['GET','POST'])
-def getMetrics():
-    
-    metricsFromSmartcar.login()
-    vInfo, vOdo = metricsFromSmartcar.vehicle()
-    return str(vInfo), str(vOdo)
-'''
    
