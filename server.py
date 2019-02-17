@@ -1,8 +1,13 @@
+
+import Location
+import ApiKey
 from flask import Flask, jsonify, request
+
 
 app = Flask(__name__)
 
-
+if __name__ == "__main__":
+    app.run(port=8000)
 
 '''
 so far useless...
@@ -20,7 +25,8 @@ return sample data set of all local landmarks for user to choose
 @app.route("/landmarks")
 def getLandmarks():
     #TODO: return list of all local landmarks on the map
-    return jsonify(name="name",lat=87.23441,lon=53.23421)
+    ApiKey.ApiKey.getInstance();
+    return Location.getLatLong("white house")
 
 
 
