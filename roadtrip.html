@@ -20,10 +20,10 @@
             <div class="row">
                 <div class="ten columns">
                     <h3>Setup your Roadtrip</h3>
-                    <td><textarea id="landmarks"></textarea></td>
+                    <td><textarea id="landmarks" class="user_input"></textarea></td>
                 </div>
                 <div class="two columns" id="setup_button" >
-                    <a class="button" href="#">Submit</a>
+                    <a class="button" onClick="fetchInput();" href="#">Submit</a>
                 </div>
             </div>
         </div>
@@ -62,4 +62,5 @@
             <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
             <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
             <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+            <script src="functions.js"></script>
     </body>
