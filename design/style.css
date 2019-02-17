@@ -22,7 +22,7 @@
 }
 
 #four {
-    background-color: red;
+    background-color: #111;
 }
 
 #eight {
@@ -39,4 +39,5 @@
     padding-left: 10px;
     color: white;
     background-color: #111;
+    border-radius: 4px;
 }
