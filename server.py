@@ -12,6 +12,8 @@ app = Flask(__name__)
 
 # global variable to save our access_token
 access = None
+fOdometer = None
+lOdometer = None
 
 client = smartcar.AuthClient(
     client_id='1714bcc1-e189-489f-81f1-aaf39fe89785',
@@ -82,7 +84,7 @@ def exchange():
     global access
     access = client.exchange_code(code)
     
-    return '', 200
+    return redirect('http://localhost:5000/vehicle')
 
 
 
