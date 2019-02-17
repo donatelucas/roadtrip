@@ -20,7 +20,6 @@ client = smartcar.AuthClient(
     redirect_uri='http://localhost:5000/exchange',
     scope=['read_vehicle_info', 'read_odometer'],
     test_mode=True,
-
 )
 
 
