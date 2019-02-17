@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="design/style.css">
   <link rel="stylesheet" href="design/normalize.css">
   <link rel="stylesheet" href="design/skeleton.css">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
 <title>Roadtrip</title>
 
@@ -46,6 +47,8 @@
             <div class="row">
                 <div class="eight columns" id="eight">
                     <h3>Navigation</h3>
+                    <div id='map' style='width: 400px; height: 300px;'></div>
+
                 </div>
                 <div class="four columns" id="four">
                     <h3>Landmarks</h3>
@@ -63,4 +66,6 @@
             <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
             <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
             <script src="functions.js"></script>
+            <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+            <script src="scripts/mapbox.js"></script>
     </body>
