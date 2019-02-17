@@ -16,6 +16,7 @@ client = smartcar.AuthClient(
     redirect_uri=os.environ.get('REDIRECT_URI'),
     scope=['read_vehicle_info', 'read_odometer'],
     test_mode=True,
+
 )
 
 
