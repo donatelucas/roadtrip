@@ -13,7 +13,5 @@ def getLatLong(loc_name):
     return jsonify(name = "L&L", position = new)
 
 
-test = getLatLong("White house")
-print (test)
 
 
