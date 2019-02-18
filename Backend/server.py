@@ -41,9 +41,7 @@ return sample data set of all local landmarks for user to choose
 def getLandmarks():
     #TODO: return list of all local landmarks on the map
     ApiKey.ApiKey.getInstance();
-    return Location.getLatLong("tokyo")
-
-
+    return Location.getLatLong("White house")
 
 
 '''
